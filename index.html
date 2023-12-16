@@ -1,4 +1,4 @@
--<<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -53,6 +53,8 @@
 <body>
     <h1>運勢測驗</h1>
 
+     <button onclick="startTest()">開始測試</button>
+
     <div class="question" id="question1">
         <p>你現在已經把包包準備好要出門了，這時你發現還有一個空位可以塞東西，你會多帶什麼？</p>
         <div class="options">
@@ -100,6 +102,11 @@
     <div id="result"></div>
 
     <script>
+    function startTest() {
+            // 顯示第一個問題
+            document.getElementById('question1').style.display = 'block';
+        }
+
     var currentQuestion = 1;
 
     function showNextQuestion(nextQuestionId) {
@@ -127,6 +134,16 @@
             alert('請選擇一個答案！');
             return;
         }
+
+
+          // 隱藏目前的問題
+            document.getElementById('question' + currentQuestion).style.display = 'none';
+
+            // 顯示下一個問題
+            document.getElementById(nextQuestionId).style.display = 'block';
+
+            // 更新目前的問題編號
+            currentQuestion++;
 
         // 計算分數並顯示結果，你可以根據分數做出相應的處理
 
