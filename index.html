@@ -100,10 +100,8 @@
             <label><input type="radio" name="q4" value="10"> 月球的背面</label>
         </div>
 
-        <div id="resultContainer" style="display: none;">
-        <h2>測驗結果</h2>
-        <p id="resultText">測驗完成！謝謝你的參與。</p>
-        <!-- 顯示測驗結果或其他相關信息 -->
+         </div>
+        <button onclick="completeTest()">完成測驗</button>
     </div>
 
 
@@ -114,6 +112,12 @@
             document.getElementById('startTestButtonContainer').style.display = 'none';
             // 顯示第一個問題
             document.getElementById('question1').style.display = 'block';
+        }
+
+     function completeTest() {
+            calculateScore();
+            // 這裡可以添加顯示測驗結果的相關代碼
+            document.getElementById('resultContainer').style.display = 'block';
         }
 
     var currentQuestion = 1;
