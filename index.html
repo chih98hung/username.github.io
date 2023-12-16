@@ -107,8 +107,10 @@
 
     <script>
     function startTest() {
+            document.getElementById('startTestButtonContainer').style.display = 'none';
             // 顯示第一個問題
             document.getElementById('question1').style.display = 'block';
+            document.getElementById('calculateScore').style.display = 'none';
         }
 
     var currentQuestion = 1;
