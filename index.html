@@ -104,7 +104,6 @@
         <button onclick="completeTest()">完成測驗</button>
     </div>
 
-
     <div class="result" id="result"></div>
 
     <script>
@@ -117,7 +116,7 @@
      function completeTest() {
             calculateScore();
             // 這裡可以添加顯示測驗結果的相關代碼
-            document.getElementById('resultContainer').style.display = 'block';
+            document.getElementById('resultContainer').style.display = 'none';
         }
 
     var currentQuestion = 1;
