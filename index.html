@@ -105,10 +105,7 @@
 
         </div>
 
-     <div id="resultContainer">
-        <h2>測驗結果</h2>
-        <p id="result"></p>
-    </div>
+     <div class="result" id="result"></div>
 
     <script>
     function startTest() {
@@ -140,13 +137,6 @@
         document.getElementById(nextQuestionId).style.display = 'block';
 
         document.getElementById('question' + currentQuestion).style.display = 'none';
-
-            // 判斷是否為最後一題，若是，顯示完成測驗按鈕
-            if (nextQuestionId === 'lastQuestion') {
-                document.getElementById('lastQuestion').style.display = 'block';
-            } else {
-                document.getElementById(nextQuestionId).style.display = 'block';
-            }
 
         // 更新目前的問題編號
         currentQuestion++;
