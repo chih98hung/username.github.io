@@ -99,7 +99,9 @@
             <label><input type="radio" name="q4" value="1"> 亞特蘭提斯</label>
             <label><input type="radio" name="q4" value="10"> 月球的背面</label>
         </div>
-     <button onclick="calculateScore()">完成測驗</button>
+
+    <div id="calculateScoreButtonContainer">
+        <button onclick="calculateScore()">開始測試</button>
     </div>
 
 
@@ -110,7 +112,7 @@
             document.getElementById('startTestButtonContainer').style.display = 'none';
             // 顯示第一個問題
             document.getElementById('question1').style.display = 'block';
-            document.getElementById('calculateScore').style.display = 'none';
+            document.getElementById('calculateScoreButtonContainer').style.display = 'none';
         }
 
     var currentQuestion = 1;
