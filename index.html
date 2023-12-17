@@ -136,7 +136,7 @@
             document.getElementById('question1').style.display = 'block';
         }
 
-     function completeTest() {
+    function completeTest() {
               calculateScore();
 
     // 隱藏所有問題和測驗結果容器
@@ -171,7 +171,7 @@
         currentQuestion++;
     }
 
-    function calculateScore() {
+    function completeTest() {
         // 檢查最後一題是否有選擇答案
         var selectedAnswer = document.querySelector('input[name="q' + currentQuestion + '"]:checked');
         if (!selectedAnswer) {
