@@ -138,7 +138,6 @@
 
     function completeTest() {
               calculateScore();
-
     // 隱藏所有問題和測驗結果容器
     var questions = document.querySelectorAll('.question');
     for (var i = 0; i < questions.length; i++) {
@@ -169,6 +168,22 @@
 
         // 更新目前的問題編號
         currentQuestion++;
+    }
+
+    function completeTest() {
+    // 計算分數前，檢查最後一題是否有選擇答案
+    var selectedAnswer = document.querySelector('input[name="q4"]:checked');
+    if (!selectedAnswer) {
+        alert('請選擇一個答案！');
+        return;
+    }
+
+    // 隱藏目前的問題
+    document.getElementById('question' + currentQuestion).style.display = 'none';
+
+    // 顯示測驗結果
+    calculateScore();
+    document.getElementById('resultContainer').style.display = 'block';
     }
 
     function calculateScore() {
