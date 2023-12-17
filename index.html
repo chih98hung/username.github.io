@@ -68,7 +68,7 @@
         }
 
     </style>
-    
+
 </head>
 
 <body>
@@ -171,9 +171,9 @@
         currentQuestion++;
     }
 
-    function completeTest() {
+    function calculateScore() {
         // 檢查最後一題是否有選擇答案
-        var selectedAnswer = document.querySelector('input[name="q' + currentQuestion + '"]:checked');
+        var selectedAnswer = document.querySelector('input[name="q4' + currentQuestion + '"]:checked');
         if (!selectedAnswer) {
             alert('請選擇一個答案！');
             return;
