@@ -200,8 +200,8 @@
 
     function calculateScore() {
         // 檢查最後一題是否有選擇答案
-        var selectedAnswer = document.querySelector('input[name="q4' + currentQuestion + '"]:checked');
-        if (!selectedAnswer) {
+        var selectedAnswer = document.querySelector('input[name="q' + currentQuestion + '"]:checked');
+        if (!selectedAnswer && currentQuestion !== 4) {
             alert('請選擇一個答案！');
             return;
         }
@@ -227,17 +227,6 @@
         // 計算分數並顯示結果，你可以根據分數做出相應的處理
 
     }
-
-        function calculateScore() {
-            var score = 0;
-            var answers = document.querySelectorAll('input[name^="q"]:checked');
-
-            for (var i = 0; i < answers.length; i++) {
-                score += parseInt(answers[i].value);
-            }
-
-            displayResult(score);
-        }
 
         function displayResult(score) {
             var resultDiv = document.getElementById('result');
