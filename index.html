@@ -10,12 +10,30 @@
             background-image: url('https://megapx-assets.dcard.tw/images/c556d922-ccfb-447e-814b-1907c3d1efc0/1280.webp'); /* 替換 'your-image-url.jpg' 為你的背景圖片 URL */
             background-size: cover; /* 使背景圖片覆蓋整個屏幕 */
             background-position: center; /* 設置背景圖片位置為中心 */
-            background-repeat: no-repeat;
             color: #000000; /* 設置文字顏色，以便在背景上可讀取 */
+           font-family: , ; /* 設置字體 */}
+     </style>
+
+     <style>
+    /*一般樣式 */
+        body {
             font-family: 'Arial', sans-serif;
+            padding: 20px;
+             }
+
+    /* 手機版樣式 */
+        @media only screen and (max-width: 600px) {
+        body {
+            padding: 10px;
+             } 
+        }
+     </style>
+
+     <style>
+        body {
+            font-family: Arial, sans-serif;
             margin: 20px;
             text-align: center;
-            padding: 20px;
         }
 
         h1 {
@@ -36,13 +54,9 @@
             margin: 0 10px;
         }
 
-        #resultContainer {
-            display: none;
-            margin-top: 20px;
-            font-weight: bold;
-
         #result {
             margin-top: 20px;
+            font-weight: bold; 
         }
 
         button {
@@ -53,14 +67,8 @@
             top: 20px; /* 距離上方的位置 */
         }
 
-        /* 手機版樣式 */
-        @media only screen and (max-width: 600px) {
-            body {
-                padding: 10px;
-        }
-
     </style>
-
+    
 </head>
 
 <body>
